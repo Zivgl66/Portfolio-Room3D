@@ -163,6 +163,7 @@ svg {
 
 .intro-text {
   position: absolute;
+  color: var(--color-text);
   top: 50%;
   left: 50%;
   font-weight: 500;
@@ -172,6 +173,7 @@ svg {
 
 .arrow-svg-wrapper {
   position: absolute;
+  color: var(--color-text);
   top: 90%;
   left: 50%;
   opacity: 0;
@@ -499,9 +501,9 @@ svg {
   }
   .hero-main-description,
   .hero-second-subheading {
-    font-size: 16px;
+    font-size: 11px;
   }
   .arrow-svg-wrapper {
-    top: 80%;
+    top: 85%;
   }
 }

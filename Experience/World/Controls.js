@@ -81,6 +81,7 @@ export default class Controls {
       "(min-width: 969px) ": () => {
         //resets ------------------------------------------------
         this.room.scale.set(0.19, 0.19, 0.19);
+        this.room.position.set(0, 0, 0);
         this.rectLight.width = 0.4;
         this.rectLight.width = 0.4;
 
