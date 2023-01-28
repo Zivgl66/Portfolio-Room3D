@@ -138,8 +138,8 @@ export default class Controls {
           .to(
             this.rectLight,
             {
-              width: 0.5 * 3,
-              height: 0.7 * 3,
+              width: 0.5 * 1.5,
+              height: 0.7 * 1.5,
             },
             "same"
           );
@@ -181,9 +181,10 @@ export default class Controls {
 
       "(min-width: 600px) and (max-width: 968px)": () => {
         //resets ------------------------------------------------
-        this.room.scale.set(0.13, 0.13, 0.13);
-        this.rectLight.width = 0.4;
-        this.rectLight.width = 0.4;
+        this.room.scale.set(0.1, 0.1, 0.1);
+        this.room.position.set(0, 0, 0);
+        this.rectLight.width = 0.15;
+        this.rectLight.height = 0.15;
 
         //first section -----------------------------------------
         this.firstMoveTimeline = new GSAP.timeline({
@@ -212,8 +213,8 @@ export default class Controls {
           .to(
             this.rectLight,
             {
-              width: 0.5 * 3,
-              height: 0.7 * 3,
+              width: 0.5 * 1.5,
+              height: 0.7 * 1.5,
             },
             "same"
           );
@@ -279,10 +280,10 @@ export default class Controls {
       // Mobile  ------------------------------------------------
       "(max-width: 599px)": () => {
         //Resets- reset room size for mobile
-        this.room.scale.set(0.07, 0.07, 0.07);
+        this.room.scale.set(0.08, 0.08, 0.08);
         this.room.position.set(0, 0, 0);
-        this.rectLight.width = 0.3;
-        this.rectLight.height = 0.3;
+        this.rectLight.width = 0.15;
+        this.rectLight.height = 0.15;
 
         //first section -----------------------------------------
         this.firstMoveTimeline = new GSAP.timeline({

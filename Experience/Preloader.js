@@ -59,12 +59,26 @@ export default class Preloader extends EventEmitter {
             ease: "power1.out",
             duration: 0.7,
           });
-      } else if (this.device === "tablet" || this.device === "mobile") {
+      } else if (this.device === "tablet") {
         this.timeline
           .to(this.roomChildren.cube.scale, {
-            x: 1.4,
-            y: 1.4,
-            z: 1.4,
+            x: 1,
+            y: 1,
+            z: 1,
+            ease: "bakc.out(2.5)",
+            duration: 0.7,
+          })
+          .to(this.room.position, {
+            z: -1,
+            ease: "power1.out",
+            duration: 0.7,
+          });
+      } else if (this.device === "mobile") {
+        this.timeline
+          .to(this.roomChildren.cube.scale, {
+            x: 0.7,
+            y: 0.7,
+            z: 0.7,
             ease: "bakc.out(2.5)",
             duration: 0.7,
           })
@@ -133,15 +147,6 @@ export default class Preloader extends EventEmitter {
           this.roomChildren.cube.rotation,
           {
             y: 2 * Math.PI + Math.PI / 4,
-          },
-          "same"
-        )
-        .to(
-          this.roomChildren.cube.scale,
-          {
-            x: 7,
-            y: 7,
-            z: 7,
           },
           "same"
         )
@@ -337,6 +342,7 @@ export default class Preloader extends EventEmitter {
         });
     });
   }
+
   onScroll(e) {
     if (e.deltaY > 0) {
       this.removeEventListeners();
@@ -352,7 +358,6 @@ export default class Preloader extends EventEmitter {
     let currentY = e.touches[0].clientY;
     let difference = this.initalY - currentY;
     if (difference > 0) {
-      
       this.removeEventListeners();
       this.playSecondIntro();
     }
