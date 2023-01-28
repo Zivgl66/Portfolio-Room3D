@@ -37,7 +37,7 @@ export default class Preloader extends EventEmitter {
   firstIntro() {
     return new Promise((resolve) => {
       this.timeline = new GSAP.timeline();
-      this.timeline.set("animate-this", { y: 0, yPercent: 100 });
+      this.timeline.set(".animate-this", { y: 0, yPercent: 100 });
       this.timeline.to(".preloader", {
         opacity: 0,
         delay: 1,
