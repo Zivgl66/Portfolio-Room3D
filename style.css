@@ -501,4 +501,7 @@ svg {
   .hero-second-subheading {
     font-size: 16px;
   }
+  .arrow-svg-wrapper {
+    top: 80%;
+  }
 }

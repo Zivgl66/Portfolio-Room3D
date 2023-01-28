@@ -37,13 +37,13 @@ export default class Preloader extends EventEmitter {
   firstIntro() {
     return new Promise((resolve) => {
       this.timeline = new GSAP.timeline();
-
+      this.timeline.set("animate-this", { y: 0, yPercent: 100 });
       this.timeline.to(".preloader", {
-        opacity:0,
+        opacity: 0,
         delay: 1,
-        onComplete: ()=>{
-            document.querySelector('.preloader').classList.add('hidden')
-        }
+        onComplete: () => {
+          document.querySelector(".preloader").classList.add("hidden");
+        },
       });
 
       if (this.device === "desktop") {
@@ -77,7 +77,7 @@ export default class Preloader extends EventEmitter {
       }
       this.timeline
         .to(".intro-text .animate-this", {
-          yPercent: -100,
+          yPercent: 0,
           stagger: 0.05,
           ease: "back.out(1.8)",
         })
@@ -180,7 +180,7 @@ export default class Preloader extends EventEmitter {
         .to(
           ".hero-main-title .animate-this",
           {
-            yPercent: -100,
+            yPercent: 0,
             stagger: 0.07,
             ease: "back.out(1.8)",
           },
@@ -189,7 +189,7 @@ export default class Preloader extends EventEmitter {
         .to(
           ".hero-main-description .animate-this",
           {
-            yPercent: -100,
+            yPercent: 0,
             stagger: 0.07,
             ease: "back.out(1.8)",
           },
@@ -198,7 +198,7 @@ export default class Preloader extends EventEmitter {
         .to(
           ".first-sub .animate-this",
           {
-            yPercent: -100,
+            yPercent: 0,
             stagger: 0.07,
             ease: "back.out(1.8)",
           },
@@ -207,7 +207,7 @@ export default class Preloader extends EventEmitter {
         .to(
           ".second-sub .animate-this",
           {
-            yPercent: -100,
+            yPercent: 0,
             stagger: 0.07,
             ease: "back.out(1.8)",
           },
