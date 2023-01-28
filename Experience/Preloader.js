@@ -31,7 +31,6 @@ export default class Preloader extends EventEmitter {
     convertSpan(document.querySelector(".second-sub"));
     this.room = this.experience.world.room.actualRoom;
     this.roomChildren = this.experience.world.room.roomChildren;
-    console.log(this.roomChildren);
   }
 
   firstIntro() {
@@ -353,7 +352,7 @@ export default class Preloader extends EventEmitter {
     let currentY = e.touches[0].clientY;
     let difference = this.initalY - currentY;
     if (difference > 0) {
-      console.log("swipped up");
+      
       this.removeEventListeners();
       this.playSecondIntro();
     }
@@ -367,6 +366,8 @@ export default class Preloader extends EventEmitter {
   }
 
   async playIntro() {
+    this.roomChildren.rectLight.width = 0;
+    this.roomChildren.rectLight.height = 0;
     await this.firstIntro();
     this.moveFlag = true;
     this.scrollOnceEvent = this.onScroll.bind(this);
@@ -393,9 +394,6 @@ export default class Preloader extends EventEmitter {
   }
 
   scale() {
-    this.roomChildren.rectLight.width = 0;
-    this.roomChildren.rectLight.height = 0;
-
     if (this.device === "desktop") {
       this.room.scale.set(0.19, 0.19, 0.19);
     } else if (this.device === "tablet") {

@@ -14,7 +14,9 @@ export default class Controls {
     this.camera = this.experience.camera;
     this.room = this.experience.world.room.actualRoom;
     this.room.children.forEach((child) => {
-      if (child.type === "RectAreaLight") this.rectLight = child;
+      if (child.type === "RectAreaLight") {
+        this.rectLight = child;
+      }
     });
     this.circleFirst = this.experience.world.floor.circleFirst;
     this.circleSecond = this.experience.world.floor.circleSecond;
@@ -83,7 +85,7 @@ export default class Controls {
         this.room.scale.set(0.19, 0.19, 0.19);
         this.room.position.set(0, 0, 0);
         this.rectLight.width = 0.4;
-        this.rectLight.width = 0.4;
+        this.rectLight.height = 0.4;
 
         //first section -----------------------------------------
         this.firstMoveTimeline = new GSAP.timeline({
