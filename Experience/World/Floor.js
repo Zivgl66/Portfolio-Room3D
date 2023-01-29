@@ -33,7 +33,6 @@ export default class Room {
     this.circleFirst.rotation.x = -Math.PI / 2;
     this.circleFirst.receiveShadow = true;
     this.scene.add(this.circleFirst);
-    console.log(this.circleFirst.material.color);
   }
 
   resize() {}

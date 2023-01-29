@@ -17,12 +17,12 @@ export default class Controls {
       if (child.type === "RectAreaLight") {
         this.rectLight = child;
       }
+      if (child.type === "PointLight") {
+        this.pointLight = child;
+      }
     });
     this.floor = this.experience.world.floor.plane;
     this.circleFirst = this.experience.world.floor.circleFirst;
-    this.circleSecond = this.experience.world.floor.circleSecond;
-    this.circleThird = this.experience.world.floor.circleThird;
-    console.log(this.camera.orthographicCamera);
 
     GSAP.registerPlugin(ScrollTrigger);
 
@@ -563,10 +563,14 @@ export default class Controls {
             });
           }
         });
+        this.fifth = GSAP.to(this.pointLight, {
+          intensity: 0.3,
+        });
         this.allMoveTimeline.add(this.first);
         this.allMoveTimeline.add(this.second);
         this.allMoveTimeline.add(this.third);
         this.allMoveTimeline.add(this.forth);
+        this.allMoveTimeline.add(this.fifth);
       },
     });
   }

@@ -373,6 +373,7 @@ export default class Preloader extends EventEmitter {
   async playIntro() {
     this.roomChildren.rectLight.width = 0;
     this.roomChildren.rectLight.height = 0;
+    this.roomChildren.pointLightLemp.intensity = 0;
     await this.firstIntro();
     this.moveFlag = true;
     this.scrollOnceEvent = this.onScroll.bind(this);

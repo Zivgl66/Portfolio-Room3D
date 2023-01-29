@@ -73,12 +73,19 @@ export default class Room {
       width,
       height
     );
+    const spotLight = new THREE.PointLight(0xffdf6a, 0.5);
     rectLight.position.set(4.1189, 3.74399, 3.5);
+    spotLight.position.set(-3.5, 0.145, 7.45);
     rectLight.rotation.x = -Math.PI / 2.1;
+    spotLight.rotation.x = -Math.PI / 2.1;
     rectLight.rotation.z = Math.PI / 4;
+    spotLight.rotation.z = Math.PI / 4;
+    console.log(spotLight);
 
     this.actualRoom.add(rectLight);
+    this.actualRoom.add(spotLight);
     this.roomChildren["rectLight"] = rectLight;
+    this.roomChildren["pointLightLemp"] = spotLight;
 
     // const rectLightHelper = new RectAreaLightHelper(rectLight);
     // rectLight.add(rectLightHelper);
