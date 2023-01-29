@@ -513,7 +513,7 @@ export default class Controls {
           .to(
             this.circleFirst.position,
             {
-              y: -2,
+              y: -1.7,
             },
             "changeCircle"
           );
