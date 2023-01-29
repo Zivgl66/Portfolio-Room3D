@@ -1,0 +1,5 @@
+- 'tablet'
+--fix position of room after first and second section animation.
+--fix cube going small after first intro ('mobile' too)
+
+--check why vercel works slow on phone.

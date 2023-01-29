@@ -18,9 +18,11 @@ export default class Controls {
         this.rectLight = child;
       }
     });
+    this.floor = this.experience.world.floor.plane;
     this.circleFirst = this.experience.world.floor.circleFirst;
     this.circleSecond = this.experience.world.floor.circleSecond;
     this.circleThird = this.experience.world.floor.circleThird;
+    console.log(this.camera.orthographicCamera);
 
     GSAP.registerPlugin(ScrollTrigger);
 
@@ -91,7 +93,7 @@ export default class Controls {
         this.firstMoveTimeline = new GSAP.timeline({
           scrollTrigger: {
             trigger: ".first-move",
-            start: "top top",
+            start: "-=600px",
             end: "+=1000px",
             scrub: 0.6,
             invalidateOnRefresh: true,
@@ -99,7 +101,10 @@ export default class Controls {
         });
         this.firstMoveTimeline.to(this.room.position, {
           x: () => {
-            return this.sizes.width * 0.0011;
+            return this.sizes.width * 0.0013;
+          },
+          y: () => {
+            return 0.1;
           },
           duration: 3,
         });
@@ -108,8 +113,8 @@ export default class Controls {
         this.secondMoveTimeline = new GSAP.timeline({
           scrollTrigger: {
             trigger: ".second-move",
-            start: "top top",
-            end: "+=1000px",
+            start: "-=800px",
+            end: "+=100px",
             scrub: 1.5,
             invalidateOnRefresh: true,
           },
@@ -118,10 +123,13 @@ export default class Controls {
             this.room.position,
             {
               x: () => {
-                return -0.5;
+                return 0.5;
               },
               z: () => {
                 return this.sizes.height * 0.0024;
+              },
+              y: () => {
+                return -1.2;
               },
             },
             "same"
@@ -129,17 +137,17 @@ export default class Controls {
           .to(
             this.room.scale,
             {
-              x: 0.3,
-              y: 0.3,
-              z: 0.3,
+              x: 0.7,
+              y: 0.7,
+              z: 0.7,
             },
             "same"
           )
           .to(
             this.rectLight,
             {
-              width: 0.5 * 1.5,
-              height: 0.7 * 1.5,
+              width: 0.5 * 2,
+              height: 0.7 * 2,
             },
             "same"
           );
@@ -157,9 +165,18 @@ export default class Controls {
           .to(
             this.camera.orthographicCamera.position,
             {
-              y: 0.9,
-              x: -3.9,
+              y: 1.5,
+              x: -2.5,
               z: 3.4,
+            },
+            "same"
+          )
+          .to(
+            this.room.scale,
+            {
+              y: 0.4,
+              x: 0.4,
+              z: 0.4,
             },
             "same"
           )
@@ -167,10 +184,10 @@ export default class Controls {
             this.room.position,
             {
               x: () => {
-                return -1.5;
+                return 2.5;
               },
               z: () => {
-                return this.sizes.height * 0.0014;
+                return this.sizes.height * -0.005;
               },
             },
             "same"
@@ -432,42 +449,46 @@ export default class Controls {
         this.firstMoveTimeline = new GSAP.timeline({
           scrollTrigger: {
             trigger: ".first-move",
-            start: "top top",
+            start: "-=300px",
             end: "+=1000px",
             scrub: 0.6,
             invalidateOnRefresh: true,
           },
-        }).to(this.circleFirst.scale, {
-          x: 5,
-          y: 5,
-          z: 5,
-        });
+        })
+          .to(this.circleFirst.scale, {
+            x: 5,
+            y: 5,
+            z: 5,
+          })
+          .to(this.floor.position, {
+            y: -3,
+          });
 
         //second circle ------------------------------------
         this.secondMoveTimeline = new GSAP.timeline({
           scrollTrigger: {
             trigger: ".second-move",
-            start: "top top",
-            end: "+=1000px",
+            start: "-=1200px",
+            end: "-=500px",
             scrub: 1.5,
             invalidateOnRefresh: true,
           },
         })
           .to(
-            this.circleSecond.scale,
+            this.circleFirst.position,
             {
-              x: 5,
-              y: 5,
-              z: 5,
+              y: -3,
             },
-            "same"
+            "changeCircle"
           )
           .to(
-            this.room.position,
+            this.circleFirst.material.color,
             {
-              y: 0.3,
+              r: 0.39,
+              g: 0.48,
+              b: 0.83,
             },
-            "same"
+            "changeCircle"
           );
 
         //third circle -----------------------------------------
@@ -479,11 +500,23 @@ export default class Controls {
             scrub: 0.6,
             invalidateOnRefresh: true,
           },
-        }).to(this.circleThird.scale, {
-          x: 5,
-          y: 5,
-          z: 5,
-        });
+        })
+          .to(
+            this.circleFirst.material.color,
+            {
+              r: 0.48,
+              g: 0.86,
+              b: 0.67,
+            },
+            "changeCircle"
+          )
+          .to(
+            this.circleFirst.position,
+            {
+              y: -2,
+            },
+            "changeCircle"
+          );
 
         //Mini platform animation ------------------------------------
         this.allMoveTimeline = new GSAP.timeline({

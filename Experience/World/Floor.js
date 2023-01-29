@@ -26,24 +26,14 @@ export default class Room {
   setCircles() {
     const geometry = new THREE.CircleGeometry(5, 64);
     const material = new THREE.MeshStandardMaterial({ color: 0xce3c3c });
-    const material2 = new THREE.MeshStandardMaterial({ color: 0x526dbd });
-    const material3 = new THREE.MeshStandardMaterial({ color: 0x7adbac });
     this.circleFirst = new THREE.Mesh(geometry, material);
-    this.circleSecond = new THREE.Mesh(geometry, material2);
-    this.circleThird = new THREE.Mesh(geometry, material3);
-    this.circleFirst.position.y = -0.25;
-    this.circleSecond.position.y = -0.24;
-    this.circleSecond.position.x = 1.5;
-    this.circleThird.position.y = -0.23;
+    this.circleFirst.position.y = -0.23;
+    this.circleFirst.position.x = 1;
     this.circleFirst.scale.set(0, 0, 0);
-    this.circleSecond.scale.set(0, 0, 0);
-    this.circleThird.scale.set(0, 0, 0);
-    this.circleFirst.rotation.x = this.circleSecond.rotation.x = this.circleThird.rotation.x =
-      -Math.PI / 2;
-    this.circleFirst.receiveShadow = this.circleSecond.receiveShadow = this.circleThird.receiveShadow = true;
+    this.circleFirst.rotation.x = -Math.PI / 2;
+    this.circleFirst.receiveShadow = true;
     this.scene.add(this.circleFirst);
-    this.scene.add(this.circleSecond);
-    this.scene.add(this.circleThird);
+    console.log(this.circleFirst.material.color);
   }
 
   resize() {}

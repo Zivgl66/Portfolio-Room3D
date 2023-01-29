@@ -320,7 +320,7 @@ export default class Preloader extends EventEmitter {
             x: 1,
             y: 1,
             z: 1,
-            ease: "back.out(2.2)",
+            ease: "power1.out",
             duration: 0.3,
           },
           ">-0.2"
