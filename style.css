@@ -475,8 +475,35 @@ svg {
 }
 
 @media (max-width: 599px) {
+  /* changing section view for mobile ------------------*/
+  .left {
+    margin-right: 0;
+    border-top-right-radius: 0;
+  }
+
+  .right {
+    margin-left: 0;
+    border-top-left-radius: 0 0;
+  }
+
+  .section-margin {
+    height: 0;
+  }
   .section {
     width: 100%;
+    padding: 500px 4%;
+  }
+
+  .section-intro-wrapper {
+    padding-bottom: 100px;
+  }
+  .section-detail-wrapper {
+    padding-bottom: 100px;
+  }
+  /*  ------------------------------------------ */
+  .toggle-bar {
+    top: 40px;
+    right: 120px;
   }
   .progress-bar-wrapper-left {
     right: 0;

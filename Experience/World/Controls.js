@@ -391,13 +391,16 @@ export default class Controls {
           this.progressWrapper = section.querySelector(".progress-wrapper");
           this.progressBar = section.querySelector(".progress-bar");
 
-          if (section.classList.contains("right")) {
+          if (
+            section.classList.contains("right") &&
+            this.sizes.device === "desktop"
+          ) {
             GSAP.to(section, {
               borderTopLeftRadius: 10,
               scrollTrigger: {
                 trigger: section,
                 start: "top bottom",
-                end: " top top",
+                end: "top top",
                 scrub: 0.6,
               },
             });
@@ -406,17 +409,17 @@ export default class Controls {
               scrollTrigger: {
                 trigger: section,
                 start: "bottom bottom",
-                end: " bottom top",
+                end: "bottom top",
                 scrub: 1,
               },
             });
-          } else {
+          } else if (this.sizes.device !== "tablet" || "mobile") {
             GSAP.to(section, {
               borderTopRightRadius: 10,
               scrollTrigger: {
                 trigger: section,
                 start: "top bottom",
-                end: " top top",
+                end: "top top",
                 scrub: 0.6,
               },
             });
@@ -425,7 +428,7 @@ export default class Controls {
               scrollTrigger: {
                 trigger: section,
                 start: "bottom bottom",
-                end: " bottom top",
+                end: "bottom top",
                 scrub: 1,
               },
             });
