@@ -454,8 +454,7 @@ svg {
 table {
   border-collapse: collapse;
   margin: 25px 0;
-  font-size: 0.9em;
-  font-family: sans-serif;
+  font-size: 1em;
   min-width: 400px;
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
 }
@@ -545,5 +544,15 @@ td {
   }
   .arrow-svg-wrapper {
     top: 85%;
+  }
+
+  table {
+    margin: 20px 0;
+    font-size: 1em;
+    min-width: 300px;
+    box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.15);
+  }
+  td {
+    padding: 8px 13px;
   }
 }

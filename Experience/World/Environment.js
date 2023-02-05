@@ -29,14 +29,14 @@ export default class Environment {
   switchTheme(theme) {
     if (theme === "dark") {
       GSAP.to(this.sunLight.color, {
-        r: 0.18888888,
-        g: 0.24444444,
-        a: 0.271111111,
+        r: 0.08888888,
+        g: 0.121111111,
+        a: 0.111111111,
       });
       GSAP.to(this.ambientlight.color, {
-        r: 0,
-        g: 0,
-        a: 0,
+        r: 0.01111,
+        g: 0.01111,
+        a: 0.01111,
       });
     } else {
       GSAP.to(this.sunLight.color, {
