@@ -161,7 +161,8 @@ svg {
   align-items: center;
 }
 
-.intro-text {
+.intro-text,
+.intro-second {
   position: absolute;
   color: var(--color-text);
   top: 50%;
@@ -385,6 +386,13 @@ svg {
   font-size: 24px;
 }
 
+.section-link a {
+  text-decoration: none;
+}
+.section-link:hover a {
+  text-decoration: underline;
+}
+
 /* Hero Section --------------------------------------------*/
 
 .hero {
@@ -396,7 +404,7 @@ svg {
 .hero-wrapper {
   position: relative;
   height: 100%;
-  width: calc(100% - 100px);
+  width: calc(100% - 500px);
   margin: 0 auto;
   max-width: 1000px;
 }

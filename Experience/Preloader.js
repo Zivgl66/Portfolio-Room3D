@@ -24,11 +24,12 @@ export default class Preloader extends EventEmitter {
     });
   }
   setAssets() {
+    convertSpan(document.querySelector(".intro-second"));
     convertSpan(document.querySelector(".intro-text"));
     convertSpan(document.querySelector(".hero-main-title"));
     convertSpan(document.querySelector(".hero-main-description"));
-    convertSpan(document.querySelector(".first-sub"));
-    convertSpan(document.querySelector(".second-sub"));
+    // convertSpan(document.querySelector(".first-sub"));
+    // convertSpan(document.querySelector(".second-sub"));
     this.room = this.experience.world.room.actualRoom;
     this.roomChildren = this.experience.world.room.roomChildren;
   }
@@ -89,9 +90,19 @@ export default class Preloader extends EventEmitter {
           });
       }
       this.timeline
+        .to(".intro-second .animate-this", {
+          yPercent: 0,
+          stagger: 0.2,
+          ease: "back.out(1.8)",
+        })
+        .to(".intro-second .animate-this", {
+          yPercent: 100,
+          stagger: 0.05,
+          ease: "back.in(1.8)",
+        })
         .to(".intro-text .animate-this", {
           yPercent: 0,
-          stagger: 0.05,
+          stagger: 0.2,
           ease: "back.out(1.8)",
         })
         .to(
