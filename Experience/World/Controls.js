@@ -97,6 +97,7 @@ export default class Controls {
             end: "+=1000px",
             scrub: 0.6,
             invalidateOnRefresh: true,
+            immediateRender: false,
           },
         });
         this.firstMoveTimeline.to(this.room.position, {
@@ -117,6 +118,7 @@ export default class Controls {
             end: "+=100px",
             scrub: 1.5,
             invalidateOnRefresh: true,
+            immediateRender: false,
           },
         })
           .to(
@@ -160,6 +162,7 @@ export default class Controls {
             end: "+=1000px",
             scrub: 0.6,
             invalidateOnRefresh: true,
+            immediateRender: false,
           },
         })
           .to(
@@ -211,6 +214,7 @@ export default class Controls {
             end: "+=1000px",
             scrub: 0.6,
             invalidateOnRefresh: true,
+            immediateRender: false,
           },
         });
         this.firstMoveTimeline.to(this.room.scale, {
@@ -244,6 +248,7 @@ export default class Controls {
             end: "+=1500px",
             scrub: 1.5,
             invalidateOnRefresh: true,
+            immediateRender: false,
           },
         }).to(
           this.room.scale,
@@ -263,6 +268,7 @@ export default class Controls {
             end: "+=1000px",
             scrub: 0.6,
             invalidateOnRefresh: true,
+            immediateRender: false,
           },
         })
           .to(
@@ -310,6 +316,7 @@ export default class Controls {
             end: "+=1000px",
             scrub: 0.6,
             invalidateOnRefresh: true,
+            immediateRender: false,
           },
         })
           .to(this.room.scale, {
@@ -345,6 +352,7 @@ export default class Controls {
             end: "+=1000px",
             scrub: 1.5,
             invalidateOnRefresh: true,
+            immediateRender: false,
           },
         })
           // .to(
@@ -402,6 +410,7 @@ export default class Controls {
                 start: "top bottom",
                 end: "top top",
                 scrub: 0.6,
+                immediateRender: false,
               },
             });
             GSAP.to(section, {
@@ -411,6 +420,7 @@ export default class Controls {
                 start: "bottom bottom",
                 end: "bottom top",
                 scrub: 1,
+                immediateRender: false,
               },
             });
           } else if (this.sizes.device !== "tablet" || "mobile") {
@@ -421,6 +431,7 @@ export default class Controls {
                 start: "top bottom",
                 end: "top top",
                 scrub: 0.6,
+                immediateRender: false,
               },
             });
             GSAP.to(section, {
@@ -430,6 +441,7 @@ export default class Controls {
                 start: "bottom bottom",
                 end: "bottom top",
                 scrub: 1,
+                immediateRender: false,
               },
             });
           }
@@ -442,6 +454,7 @@ export default class Controls {
               scrub: 0.6,
               pin: this.progressWrapper,
               pinSpacing: false,
+              immediateRender: false,
             },
           });
         });
@@ -456,6 +469,7 @@ export default class Controls {
             end: "+=1000px",
             scrub: 0.6,
             invalidateOnRefresh: true,
+            immediateRender: false,
           },
         })
           .to(this.circleFirst.scale, {
@@ -475,6 +489,7 @@ export default class Controls {
             end: "-=500px",
             scrub: 1.5,
             invalidateOnRefresh: true,
+            immediateRender: false,
           },
         })
           .to(
@@ -502,6 +517,7 @@ export default class Controls {
             end: "+=1000px",
             scrub: 0.6,
             invalidateOnRefresh: true,
+            immediateRender: false,
           },
         })
           .to(
@@ -526,6 +542,7 @@ export default class Controls {
           scrollTrigger: {
             trigger: ".third-move",
             start: "-=800px",
+            immediateRender: false,
           },
         });
 
