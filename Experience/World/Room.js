@@ -80,7 +80,6 @@ export default class Room {
     spotLight.rotation.x = -Math.PI / 2.1;
     rectLight.rotation.z = Math.PI / 4;
     spotLight.rotation.z = Math.PI / 4;
-    console.log(spotLight);
 
     this.actualRoom.add(rectLight);
     this.actualRoom.add(spotLight);
