@@ -22,7 +22,7 @@ The portfolio presents a visually immersive environment to display and highlight
 
 ## Usage
 
-Check out my <href link="https://portfolio-room3d.vercel.app/">ROOM</href> 
+Check out my [ROOM](https://portfolio-room3d.vercel.app/)
 
 
 ### In the Home screen you can see your current locations weather. 
