@@ -1,6 +1,9 @@
 
 # Ziv Gliser - 3D Room Portfolio
 
+Check out my [ROOM](https://portfolio-room3d.vercel.app/)
+
+
 ![1](https://github.com/Zivgl66/Portfolio-Room3D/assets/95753868/fb64b016-d03a-48ef-9228-12687575d9af)
 
 ## IMPORTANT - This website was inspired by: [KAMABOKO PORTFOLIO](https://bokoko33.me/)
@@ -21,8 +24,6 @@ The portfolio presents a visually immersive environment to display and highlight
 
 
 ## Usage
-
-Check out my [ROOM](https://portfolio-room3d.vercel.app/)
 
 
 ### An immersive 3D Experience. 
@@ -46,17 +47,8 @@ Check out my [ROOM](https://portfolio-room3d.vercel.app/)
 
 ## 🤝 Credits
 
-Third party libraries:
-- **"@react-native-async-storage/async-storage": "1.17.11",**
-- "axios": "^1.4.0",
-- "expo": "^48.0.7",
-- "lottie-react-native": "5.1.4",
-- "react-native-bouncy-checkbox": "^3.0.7",
-- "react-native-heroicons": "^3.2.0",
-- "react-native-switch": "^1.5.1",
-- "react-native-svg": "13.4.0",
+- KAMABOKO PORTFOLIO
 
- 
 
 ## License
 
