@@ -3,6 +3,7 @@
 
 ![1](https://github.com/Zivgl66/Portfolio-Room3D/assets/95753868/fb64b016-d03a-48ef-9228-12687575d9af)
 
+## IMPORTANT - This website was inspired by: [KAMABOKO PORTFOLIO](https://bokoko33.me/)
 
 ## Description
 
@@ -15,7 +16,6 @@ The portfolio presents a visually immersive environment to display and highlight
 - [Credits](#credits)
 - [License](#license)
 - [Badges](#badges)
-- [Tests](#tests)
 - [Contribute](#contribute)
   
 
@@ -25,18 +25,15 @@ The portfolio presents a visually immersive environment to display and highlight
 Check out my [ROOM](https://portfolio-room3d.vercel.app/)
 
 
-### In the Home screen you can see your current locations weather. 
-<img src="https://github.com/Zivgl66/WeatherApp/blob/main/assets/screenshots/5.png" height="60%" width="60%" >
+### An immersive 3D Experience. 
+![2](https://github.com/Zivgl66/Portfolio-Room3D/assets/95753868/471ee0c7-8c25-4e6c-a662-284e38647087)
 
+### Scroll down to zoom in on different apects of the room and learn more about me.
+![3](https://github.com/Zivgl66/Portfolio-Room3D/assets/95753868/bcff19e1-815c-41b3-aa42-9bbf0f9f33d7)
 
-### Type the city you wish to get the weather for in the search tab.
-<img src="https://github.com/Zivgl66/WeatherApp/blob/main/assets/screenshots/2.png" height="60%" width="60%" >
+### Theme not only changes the color but also the lightning in the room.
+![4](https://github.com/Zivgl66/Portfolio-Room3D/assets/95753868/da393b49-5e0b-4e9f-b760-7456bbf94201)
 
-### You can sort the search results by alphabetical order or by distance to a city of your choice.
-<img src="https://github.com/Zivgl66/WeatherApp/blob/main/assets/screenshots/4.png" height="50%" width="60%" >
-
-### Click on the city you want, and get the latest weather updates
-<img src="https://github.com/Zivgl66/WeatherApp/blob/main/assets/screenshots/3.png" height="60%" width="60%" >
 
 
 ## Features
@@ -59,8 +56,6 @@ Third party libraries:
 - "react-native-switch": "^1.5.1",
 - "react-native-svg": "13.4.0",
 
-
- **WEATHERAPI & PEXELSAPI**
  
 
 ## License
@@ -90,47 +85,12 @@ SOFTWARE.
 ## Badges
 
 ![badmath](https://img.shields.io/badge/JavaScript-323330?style=for-the-badge&logo=javascript&logoColor=F7DF1E)
-![badmath](https://img.shields.io/badge/React_Native-20232A?style=for-the-badge&logo=react&logoColor=61DAFB)
-![badmath](https://img.shields.io/badge/Expo-1B1F23?style=for-the-badge&logo=expo&logoColor=white)
-![badmath](https://img.shields.io/badge/json-5E5C5C?style=for-the-badge&logo=json&logoColor=white)
+![badmath](https://img.shields.io/badge/ThreeJs-black?style=for-the-badge&logo=three.js&logoColor=white)
+![badmath](https://img.shields.io/badge/Vite-B73BFE?style=for-the-badge&logo=vite&logoColor=FFD62E)
+![badmath](https://img.shields.io/badge/blender-%23F5792A.svg?style=for-the-badge&logo=blender&logoColor=white)
+![badmath](https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white)
+![badmath](https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white)
 
-
-
-## Tests
-
-This project includes tests to ensure the correctness and functionality of its components. These tests are written using Jest and React Native Testing Library.
-
-### Running Tests
-After you run the project localy you can access the tests:
-```
-npm test
-```
-
-I made an example test for the 'WeatherBox' Component:
-```
-// WeatherBox.test.js
-import React from "react";
-import { render } from "@testing-library/react-native";
-import WeatherBox from "./weatherBox.jsx";
-
-// This test checks if the component renders the props correctly
-describe("WeatherBox component", () => {
-  test("renders weather information correctly", () => {
-    const condition = require("../../assets/Animations/Animation - 1701969736685.json");
-    const day = "Monday";
-    const degree = 25;
-
-    const { getByText } = render(
-      <WeatherBox condition={condition} day={day} degree={degree} />
-    );
-
-    expect(getByText(day)).toBeTruthy();
-    expect(getByText(`${degree}°`)).toBeTruthy();
-  });
-});
-```
-
-### This test would check if the WeatherBox component, when provided with specific props (condition, day, degree), correctly renders the day and degree values within its content.
 
 
 ## Contribute
